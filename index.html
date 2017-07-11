@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nightout photo downloader</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>Nightout.ru photo downloader</h1>
+    <label>Вставьте ссылку: </label>
+    <input id="urlInput" type="text" placeholder="https://nightout.ru/...">
+    <button id="folderButton">Выбрать папку загрузки</button>
+    <input type="file" webkitdirectory id="folderInput" style="display: none" />
+    <div id="folderPath">Путь не выбран</div>
+
+    <input id="submitButton" type="submit" value="Скачать">
+
+    <br>
+
+    <p>Лог: </p>
+    <textarea id="logArea"></textarea>
+
+    <p>
+        <!-- All of the Node.js APIs are available in this renderer process. -->
+        Using Node.js <script>document.write(process.versions.node)</script>,
+        Chromium <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.
+    </p>
+</div>
+</body>
+
+<script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+</script>
+</html>
